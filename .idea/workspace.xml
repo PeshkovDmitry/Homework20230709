@@ -4,24 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework20230709.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notebooks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NoteBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NoteBookData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NoteBookFilter.java" afterDir="false" />
+    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook">
+      <change afterPath="$PROJECT_DIR$/notebooks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NoteBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBookData.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,6 +62,18 @@
       <option name="presentableId" value="Default" />
       <updated>1688903127943</updated>
     </task>
+    <task id="LOCAL-00001" summary="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook">
+      <created>1688905478775</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688905478775</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook" />
   </component>
 </project>
