@@ -1,15 +1,12 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class NoteBookData {
-    List<NoteBook> list = new LinkedList<>();
+    Set<NoteBook> set = new HashSet<>();
 
-    /**
-     * Метод для считывания и парсинга имеющегося файла с данными ноутбуков
-     */
     public void loadFromFile() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader("notebooks.csv"));
@@ -34,14 +31,13 @@ public class NoteBookData {
                 nb.setScreenDiagonal(Float.parseFloat(data[12]));
                 nb.setScreenType(data[13]);
                 nb.setOperationSystem(data[14]);
-                System.out.println(nb);
+                set.add(nb);
             }
         }
         catch (IOException e) {
             System.out.println(e.getMessage());
         }
-
-
     }
+
 
 }

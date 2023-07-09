@@ -136,4 +136,30 @@ public class NoteBook {
     public void setScreenResolution(String screenResolution) {
         this.screenResolution = screenResolution;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Производитель: ").append(manufacturer).append("\n");
+        sb.append("Модель: ").append(model).append("\n");
+        sb.append("Операционная система: ").append(operationSystem).append("\n");
+        sb.append("Диагональ экрана: ").append(screenDiagonal).append("\n");
+        sb.append("Размер экрана в пикселях: ").append(screenResolution).append("\n");
+        sb.append("Тип  матрицы: ").append(screenType).append("\n");
+        sb.append("Модель процессора: ").append(processorModel).append("\n");
+        sb.append("Количество ядер процессора: ").append(processorCoreNumber).append("\n");
+        sb.append("Тактовая частота процессора: ").append(processorCoreFrequency).append("\n");
+        sb.append("Размер оперативной памяти: ").append(ramSize).append("\n");
+        sb.append("Тип оперативной памяти: ").append(ramType).append("\n");
+        sb.append("Тип встроенной видеокарты: ").append(integratedVideoType).append("\n");
+        sb.append("Тип дискретной видеокарты: ").append(discreteVideoType).append("\n");
+        sb.append("Размер SSD диска: ").append(ssdSize).append("\n");
+        sb.append("Цена: ").append(price).append("\n");
+        return sb.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return 5 * manufacturer.hashCode() + 11 * model.hashCode() + 17 * price;
+    }
 }
