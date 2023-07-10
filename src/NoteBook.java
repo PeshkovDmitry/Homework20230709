@@ -7,32 +7,12 @@ public class NoteBook {
 
     private Map<NotebookFields, String> data = new HashMap<>();
 
-    // Список всех параметров ноутбука
-
-    public enum NotebookFields {
-        MANUFACTURER,            // Производитель
-        MODEL,                   // Модель
-        PRICE,                   // Цена
-        PROCESSORMODEL,          // Модель процессора
-        PROCESSORCORENUMBER,     // Количество ядер процессора
-        PROCESSORCOREFREQUENCY,  // Тактовая частота процессора
-        DISCRETEVIDEOTYPE,       // Тип дискретной видеокарты
-        INTEGRATEDVIDEOTYPE,     // Тип встроенной видеокарты
-        RAMSIZE,                 // Размер оперативной памяти
-        RAMTYPE,                 // Тип оперативной памяти
-        SSDSIZE,                 // Размер SSD диска
-        SCREENRESOLUTION,        // Размер экрана в пикселях
-        SCREENDIAGONAL,          // Диагональ экрана
-        SCREENTYPE,              // Тип  матрицы
-        OPERATIONSYSTEM,         // Операционная система
-    }
-
     /**
      * Метод для получения описания заданного параметра
      * @param field Параметр ноутбука
      * @return Описание параметра
      */
-    public String getDescription(NotebookFields field){
+    public static String getDescription(NotebookFields field){
         switch (field) {
             case MANUFACTURER:          return "Производитель";
             case MODEL:                 return "Модель";
@@ -50,7 +30,7 @@ public class NoteBook {
             case SSDSIZE:               return "Размер SSD диска, ГБ";
             case PRICE:                 return "Цена, руб.";
         }
-        return "Неизвестны параметр";
+        return "Неизвестный параметр";
     }
 
     /**

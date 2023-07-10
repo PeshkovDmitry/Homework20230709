@@ -17,5 +17,11 @@
 public class Main {
     public static void main(String[] args) {
         NoteBookData noteBookData = new NoteBookData();
+//        noteBookData.showAll();
+        NoteBookFilter filter = new NoteBookFilter();
+        filter.add(NotebookFields.MODEL, "Хороший ноутбук");
+        filter.add(NotebookFields.MODEL, "Так себе ноутбук");
+        filter.add(NotebookFields.OPERATIONSYSTEM, "Windows");
+        System.out.println(filter);
     }
 }
