@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="Переопределены методы toString() и hashCode() для класса Notebook">
-      <change afterPath="$PROJECT_DIR$/src/NotebookFields.java" afterDir="false" />
+    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="Добавлен метод для считывания данных из csv файла">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NoteBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBookData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NoteBookFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBookFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NotebookFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotebookField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,19 +34,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="6c3f7880-9deb-4147-863c-2310d186aeee" />
-        <option name="url" value="https://github.com/PeshkovDmitry/Homework20230709.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,6 +88,17 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook" />

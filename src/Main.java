@@ -19,9 +19,9 @@ public class Main {
         NoteBookData noteBookData = new NoteBookData();
 //        noteBookData.showAll();
         NoteBookFilter filter = new NoteBookFilter();
-        filter.add(NotebookFields.MODEL, "Хороший ноутбук");
-        filter.add(NotebookFields.MODEL, "Так себе ноутбук");
-        filter.add(NotebookFields.OPERATIONSYSTEM, "Windows");
+        filter.add(NotebookField.MODEL, "Хороший ноутбук");
+        filter.add(NotebookField.MODEL, "Так себе ноутбук");
+        filter.add(NotebookField.OPERATIONSYSTEM, "Windows");
         System.out.println(filter);
     }
 }

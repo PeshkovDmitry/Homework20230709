@@ -2,14 +2,14 @@ import java.util.*;
 
 public class NoteBookFilter {
     // Коллекция фильтров
-    private Map<NotebookFields, List<String>> data = new HashMap<>();
+    private Map<NotebookField, List<String>> data = new HashMap<>();
 
     /**
      * Метод для добавления фильтра
      * @param field Параметр ноутбука
      * @param value Значение параметра ноутбука
      */
-    public void add(NotebookFields field, String value) {
+    public void add(NotebookField field, String value) {
         if (data.containsKey(field)) {
             data.get(field).add(value);
         } else {
@@ -23,7 +23,7 @@ public class NoteBookFilter {
      * Метод для удаления фильтра
      * @param field Параметр ноутбука
      */
-    public void remove(NotebookFields field) {
+    public void remove(NotebookField field) {
         data.remove(field);
     }
 
@@ -32,7 +32,7 @@ public class NoteBookFilter {
      * @param field Параметр ноутбука
      * @param value Удаляемое значение
      */
-    public void remove(NotebookFields field, String value) {
+    public void remove(NotebookField field, String value) {
         if (data.containsKey(field)) {
             data.get(field).remove(value);
         }
@@ -49,16 +49,16 @@ public class NoteBookFilter {
      * Метод для получения множества применяемых в фильтре параметров полей
      * @return
      */
-    public Set<NotebookFields> getUsedNotebookFields() {
+    public Set<NotebookField> getUsedNotebookFields() {
         return data.keySet();
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (NotebookFields field : NotebookFields.values()) {
+        for (NotebookField field : NotebookField.values()) {
             if (data.containsKey(field)) {
-                sb.append(NoteBook.getDescription(field)).append(": ");
+                sb.append(field.descritpion()).append(": ");
                 for (String str : data.get(field)) {
                     sb.append(str).append("; ");
                 }

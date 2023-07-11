@@ -24,8 +24,8 @@ public class NoteBookData {
             while ((str = bufferedReader.readLine()) != null) {
                 NoteBook nb = new NoteBook();
                 String[] data = str.split(";");
-                for (int i = 0; i < NotebookFields.values().length; i++) {
-                    nb.setValue(NotebookFields.values()[i], data[i]);
+                for (int i = 0; i < NotebookField.values().length; i++) {
+                    nb.setValue(NotebookField.values()[i], data[i]);
                 }
                 set.add(nb);
             }
@@ -59,10 +59,10 @@ public class NoteBookData {
      */
     public Set<NoteBook> getFiltered(NoteBookFilter filter) {
         Set<NoteBook> res = new HashSet<>();
-        Set<NotebookFields> fields = filter.getUsedNotebookFields();
+        Set<NotebookField> fields = filter.getUsedNotebookFields();
         for (NoteBook nb : set) {
             boolean addToResult = true;
-            for (NotebookFields field : fields) {
+            for (NotebookField field : fields) {
 
             }
         }
