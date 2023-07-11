@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="Переделано перечисление NotebookField">
+    <list default="true" id="69220294-0c5c-477c-b4d4-9f75b2c10c7e" name="Changes" comment="Реализована основная логика работы программы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NoteBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NoteBookData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBookData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NoteBookFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NoteBookFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NotebookField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NotebookField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689065977906</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Реализована основная логика работы программы">
+      <option name="closed" value="true" />
+      <created>1689070967216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689070967216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +120,7 @@
     <MESSAGE value="Начальный коммит. Создание пустых файлов для классов. Поля для класса Notebook" />
     <MESSAGE value="Добавлен метод для считывания данных из csv файла" />
     <MESSAGE value="Переделано перечисление NotebookField" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделано перечисление NotebookField" />
+    <MESSAGE value="Реализована основная логика работы программы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализована основная логика работы программы" />
   </component>
 </project>

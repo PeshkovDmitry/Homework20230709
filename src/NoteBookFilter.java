@@ -75,6 +75,7 @@ public class NoteBookFilter {
                 sb.append("\n");
             }
         }
+        if (sb.length() == 0) return "Фильтр пуст";
         return sb.toString();
     }
 }

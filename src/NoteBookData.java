@@ -1,7 +1,9 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class NoteBookData {
@@ -35,15 +37,6 @@ public class NoteBookData {
         }
     }
 
-    /**
-     * Метод для вывода заданного множества ноутбуков на экран
-     * @param outSet Множество ноутбуков для вывода
-     */
-    private void show(Set<NoteBook> outSet) {
-        for (NoteBook nb : outSet) {
-            System.out.println(nb);
-        }
-    }
 
     /**
      * Метод для вывода всего множества ноутбуков на экран
@@ -56,9 +49,28 @@ public class NoteBookData {
      * Метод для вывода множества соответсвующих фильтру ноутбуков на экран
      */
     public void showFiltered(NoteBookFilter filter) {
-        show(getFiltered(filter));
+        Set<NoteBook> set  = getFiltered(filter);
+        if (set.isEmpty()) {
+            System.out.println("Ничего не найдено :(");
+        } else {
+            show(getFiltered(filter));
+        }
     }
 
+    /**
+     * Метод для получения списка доступных значений для заданного параметра ноутбука
+     * @param field Параметр ноутбука
+     * @return Список доступных значений
+     */
+    public List<String> getAllValuesByNotebookField(NotebookField field) {
+        List<String> out = new ArrayList<>();
+        for (NoteBook nb : set) {
+            if (!out.contains(nb.getValue(field))) {
+                out.add(nb.getValue(field));
+            }
+        }
+        return out;
+    }
 
     /**
      * Метод для получения множества ноутбуков, удовлетворяющих заданному фильтру
@@ -69,12 +81,28 @@ public class NoteBookData {
         Set<NoteBook> res = new HashSet<>();
         Set<NotebookField> filterFields = filter.getUsedNotebookFields();
         for (NoteBook nb : set) {
-            boolean addToResult = true;
+            boolean addToResult = !filterFields.isEmpty();
             for (NotebookField field : filterFields) {
                 addToResult = addToResult && filter.inFilter(field, nb.getValue(field));
             }
             if (addToResult) res.add(nb);
         }
         return res;
+    }
+
+    /**
+     * Метод для вывода заданного множества ноутбуков на экран
+     * @param outSet Множество ноутбуков для вывода
+     */
+    private void show(Set<NoteBook> outSet) {
+        StringBuilder sb = new StringBuilder();
+        int i = 0;
+        for (NoteBook nb : outSet) {
+            sb.append(i++)
+                    .append(": ")
+                    .append(nb)
+                    .append("\n");
+        }
+        System.out.println(sb);
     }
 }

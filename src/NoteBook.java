@@ -27,11 +27,7 @@ public class NoteBook {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        for (NotebookField field : NotebookField.values()) {
-            sb.append(field.descritpion()).append(": ").append(getValue(field)).append("\n");
-        }
-        return sb.toString();
+        return shortInfo();
     }
 
     @Override
@@ -51,5 +47,37 @@ public class NoteBook {
             if (!(nb.getValue(field).equals(getValue(field)))) eq = false;
         }
         return eq;
+    }
+
+    /**
+     * Метод для вывода полной информации о ноутбуке
+     * @return Строка с описанием
+     */
+
+    private String fullInfo() {
+        StringBuilder sb = new StringBuilder();
+        for (NotebookField field : NotebookField.values()) {
+            sb.append(field.descritpion()).append(": ").append(getValue(field)).append("\n");
+        }
+        return sb.toString();
+    }
+
+    /**
+     * Метод для вывода информации о ноутбуке в краткой форме
+     * @return Строка с описанием
+     */
+    private String shortInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getValue(NotebookField.MANUFACTURER)).append(" ")
+                .append(getValue(NotebookField.MODEL)).append(" (")
+                .append(getValue(NotebookField.SCREENDIAGONAL)).append("\" ")
+                .append(getValue(NotebookField.SCREENRESOLUTION)).append(" / ")
+                .append(getValue(NotebookField.PROCESSORMODEL)).append(" ")
+                .append(getValue(NotebookField.PROCESSORCORENUMBER)).append("x")
+                .append(getValue(NotebookField.PROCESSORCOREFREQUENCY)).append(" ГГц / ")
+                .append(getValue(NotebookField.RAMSIZE)).append(" Гб / ")
+                .append(getValue(NotebookField.SSDSIZE)).append(" Гб) - ")
+                .append(getValue(NotebookField.PRICE)).append(" руб.");
+        return sb.toString();
     }
 }

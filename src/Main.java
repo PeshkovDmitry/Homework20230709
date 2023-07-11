@@ -16,15 +16,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        NoteBookData noteBookData = new NoteBookData();
-        NoteBookFilter filter = new NoteBookFilter();
-        filter.add(NotebookField.PROCESSORCORENUMBER, "6");
-        filter.add(NotebookField.PROCESSORCORENUMBER, "4");
-//        filter.add(NotebookField.MODEL, "Так себе ноутбук");
-//        filter.add(NotebookField.OPERATIONSYSTEM, "Windows");
-//        System.out.println(filter);
-        noteBookData.showFiltered(filter);
-//        noteBookData.showAll();
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.showMainWindow();
     }
 
 }
