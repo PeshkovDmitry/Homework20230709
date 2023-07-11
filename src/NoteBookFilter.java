@@ -20,6 +20,16 @@ public class NoteBookFilter {
     }
 
     /**
+     * Метод для получения списка значений для заданного параметра ноутбука
+     * @param field Параметр ноутбука
+     * @return Список значений в фильтре
+     */
+    public List<String> get(NotebookField field) {
+        List<String> out = new ArrayList<>(data.get(field));
+        return out;
+    }
+
+    /**
      * Метод для удаления фильтра
      * @param field Параметр ноутбука
      */
@@ -49,8 +59,9 @@ public class NoteBookFilter {
      * Метод для получения множества применяемых в фильтре параметров полей
      * @return
      */
-    public Set<NotebookField> getUsedNotebookFields() {
-        return data.keySet();
+    public List<NotebookField> getUsedNotebookFields() {
+        List<NotebookField> out = new ArrayList<>(data.keySet());
+        return out;
     }
 
     /**
@@ -75,7 +86,7 @@ public class NoteBookFilter {
                 sb.append("\n");
             }
         }
-        if (sb.length() == 0) return "Фильтр пуст";
+        if (sb.length() == 0) return "Фильтр пуст \n";
         return sb.toString();
     }
 }

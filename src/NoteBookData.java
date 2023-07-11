@@ -1,10 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class NoteBookData {
 
@@ -69,6 +66,7 @@ public class NoteBookData {
                 out.add(nb.getValue(field));
             }
         }
+        Collections.sort(out);
         return out;
     }
 
@@ -79,7 +77,7 @@ public class NoteBookData {
      */
     private Set<NoteBook> getFiltered(NoteBookFilter filter) {
         Set<NoteBook> res = new HashSet<>();
-        Set<NotebookField> filterFields = filter.getUsedNotebookFields();
+        List<NotebookField> filterFields = filter.getUsedNotebookFields();
         for (NoteBook nb : set) {
             boolean addToResult = !filterFields.isEmpty();
             for (NotebookField field : filterFields) {
@@ -103,6 +101,6 @@ public class NoteBookData {
                     .append(nb)
                     .append("\n");
         }
-        System.out.println(sb);
+        System.out.print(sb);
     }
 }
