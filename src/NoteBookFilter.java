@@ -2,7 +2,7 @@ import java.util.*;
 
 public class NoteBookFilter {
     // Коллекция фильтров
-    private Map<NotebookField, List<String>> data = new HashMap<>();
+    private Map<NotebookField, Set<String>> data = new HashMap<>();
 
     /**
      * Метод для добавления фильтра
@@ -13,9 +13,9 @@ public class NoteBookFilter {
         if (data.containsKey(field)) {
             data.get(field).add(value);
         } else {
-            List<String> list = new ArrayList<>();
-            list.add(value);
-            data.put(field, list);
+            Set<String> set = new HashSet<>();
+            set.add(value);
+            data.put(field, set);
         }
     }
 
@@ -51,6 +51,16 @@ public class NoteBookFilter {
      */
     public Set<NotebookField> getUsedNotebookFields() {
         return data.keySet();
+    }
+
+    /**
+     * Метод, проверяющий, есть ли такой параметр с таким значением в фильтре
+     * @param field Параметр ноутбука
+     * @param value Значение параметра
+     * @return Признак наличия в фильтре
+     */
+    public boolean inFilter(NotebookField field, String value) {
+        return data.get(field).contains(value);
     }
 
     @Override

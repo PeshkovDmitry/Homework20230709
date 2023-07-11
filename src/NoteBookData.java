@@ -39,7 +39,7 @@ public class NoteBookData {
      * Метод для вывода заданного множества ноутбуков на экран
      * @param outSet Множество ноутбуков для вывода
      */
-    public void show(Set<NoteBook> outSet) {
+    private void show(Set<NoteBook> outSet) {
         for (NoteBook nb : outSet) {
             System.out.println(nb);
         }
@@ -53,25 +53,28 @@ public class NoteBookData {
     }
 
     /**
+     * Метод для вывода множества соответсвующих фильтру ноутбуков на экран
+     */
+    public void showFiltered(NoteBookFilter filter) {
+        show(getFiltered(filter));
+    }
+
+
+    /**
      * Метод для получения множества ноутбуков, удовлетворяющих заданному фильтру
      * @param filter
      * @return
      */
-    public Set<NoteBook> getFiltered(NoteBookFilter filter) {
+    private Set<NoteBook> getFiltered(NoteBookFilter filter) {
         Set<NoteBook> res = new HashSet<>();
-        Set<NotebookField> fields = filter.getUsedNotebookFields();
+        Set<NotebookField> filterFields = filter.getUsedNotebookFields();
         for (NoteBook nb : set) {
             boolean addToResult = true;
-            for (NotebookField field : fields) {
-
+            for (NotebookField field : filterFields) {
+                addToResult = addToResult && filter.inFilter(field, nb.getValue(field));
             }
+            if (addToResult) res.add(nb);
         }
         return res;
     }
-
-
-
-
-
-
 }
