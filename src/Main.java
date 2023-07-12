@@ -16,8 +16,8 @@
 
 public class Main {
     public static void main(String[] args) {
-        NoteBookData noteBookData = new NoteBookData();
-        noteBookData.loadFromFile();
-
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.showMainWindow();
     }
+
 }
