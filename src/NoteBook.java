@@ -71,12 +71,12 @@ public class NoteBook {
         sb.append(getValue(NotebookField.MANUFACTURER)).append(" ")
                 .append(getValue(NotebookField.MODEL)).append(" (")
                 .append(getValue(NotebookField.SCREENDIAGONAL)).append("\" ")
-                .append(getValue(NotebookField.SCREENRESOLUTION)).append(" / ")
+                .append(getValue(NotebookField.SCREENRESOLUTION)).append("/")
                 .append(getValue(NotebookField.PROCESSORMODEL)).append(" ")
                 .append(getValue(NotebookField.PROCESSORCORENUMBER)).append("x")
-                .append(getValue(NotebookField.PROCESSORCOREFREQUENCY)).append(" ГГц / ")
-                .append(getValue(NotebookField.RAMSIZE)).append(" Гб / ")
-                .append(getValue(NotebookField.SSDSIZE)).append(" Гб) - ")
+                .append(getValue(NotebookField.PROCESSORCOREFREQUENCY)).append("ГГц/")
+                .append(getValue(NotebookField.RAMSIZE)).append("Гб/")
+                .append(getValue(NotebookField.SSDSIZE)).append("Гб) - ")
                 .append(getValue(NotebookField.PRICE)).append(" руб.");
         return sb.toString();
     }

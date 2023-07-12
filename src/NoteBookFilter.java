@@ -30,14 +30,6 @@ public class NoteBookFilter {
     }
 
     /**
-     * Метод для удаления фильтра
-     * @param field Параметр ноутбука
-     */
-    public void remove(NotebookField field) {
-        data.remove(field);
-    }
-
-    /**
      * Метод для удаления одного значения из фильтра
      * @param field Параметр ноутбука
      * @param value Удаляемое значение
@@ -45,6 +37,7 @@ public class NoteBookFilter {
     public void remove(NotebookField field, String value) {
         if (data.containsKey(field)) {
             data.get(field).remove(value);
+            if (data.get(field).isEmpty()) data.remove(field);
         }
     }
 

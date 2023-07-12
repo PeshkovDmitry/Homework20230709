@@ -56,6 +56,10 @@ public class MainWindow {
                     showFilterDeleteWindow();
                     break;
                 case 4:
+                    System.out.println("Все значения в фильтре удалены");
+                    filter.clear();
+                    break;
+                case 5:
                     work = false;
                     break;
                 default:
@@ -100,6 +104,7 @@ public class MainWindow {
                         .append("\n");
             }
             System.out.print(sb);
+            // Запрос выбранных номеров значений от пользователя
             List<Integer> selectedArray = parseArrayFromConsole(selectedField, values);
             if (selectedArray.size() > 0) {
                 for (Integer val : selectedArray) {
@@ -152,6 +157,7 @@ public class MainWindow {
                         .append("\n");
             }
             System.out.print(sb);
+            // Запрос выбранных номеров значений от пользователя
             List<Integer> selectedArray = parseArrayFromConsole(selectedField, values);
             if (selectedArray.size() > 0) {
                 for (Integer val : selectedArray) {
@@ -256,6 +262,7 @@ public class MainWindow {
             + "1 - Показать параметры текущего фильтра \n"
             + "2 - Добавление параметра в фильтр \n"
             + "3 - Удаление параметра из фильтра \n"
-            + "4 - Назад";
+            + "4 - Сброс фильтра \n"
+            + "5 - Назад";
 
 }
